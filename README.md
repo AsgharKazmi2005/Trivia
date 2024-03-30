@@ -1,8 +1,10 @@
 Who Wants to be a Millionaire by Asghar Kazmi and Denis Musovski
 
-The application is built using a Maven Java backend that also serves as an API for the frontend. Data is exchanged between the Java backend and React frontend through http.
+Professor Kapoor, The Java files can be found in the src file.
 
-Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details are described below.
+The application is built using a Maven Java backend that also serves as an API for the frontend. Data is exchanged between the Java backend and React frontend through HTTP. This GITHUB will not function if executed as it is a collection of the front-end and back-end files without any infrastructure.
+
+Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details and changes are described below.
 
 Below are the features implemented using best Java and OOP principles
 
