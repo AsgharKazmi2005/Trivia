@@ -1,4 +1,4 @@
-Who want to be a Millionaire by Asghar Kazmi and Denis Musovski
+Who Wants to be a Millionaire by Asghar Kazmi and Denis Musovski
 
 The application is built using a Maven Java backend that also serves as an API for the frontend. Data is exchanged between the Java backend and React frontend through http.
 
@@ -22,7 +22,8 @@ Below are the features implemented using best Java and OOP principles
 
         Objective: Implement a user input mechanism to allow answer selection and validate the response.
       
-        Requirements: Use Scanner for input in the MillionaireCoderGame class. Add answer validation logic in the Question class.
+        Requirements: Use Scanner for input in the MillionaireCoderGame class. Add answer validation logic
+                      in the Question class.
       
         Implementation: Since we used a React frontend, we used text field inputs binded to react
                         state variables instead of a Scanner object for input. Answer validation logic
