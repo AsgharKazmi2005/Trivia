@@ -2,20 +2,30 @@ Who want to be a Millionaire by Asghar Kazmi and Denis Musovski
 
 The application is built using a Maven Java backend that also serves as an API for the frontend. Data is exchanged between the Java backend and React frontend through http.
 
+Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details are described below.
+
 Below are the features implemented using best Java and OOP principles
 
 - [X] Feature 1: Interactive Question and Options Display
 
-        Objective: Modify the question display to present the question and shuffled answer options to the user without showing the correct answer.
+        Objective: Modify the question display to present the question and shuffled answer options to the
+                   user without showing the correct answer.
+
         Requirements: Update the TriviaQuestionParser class. Ensure options are displayed in a random order.
-        Implementation: The TrviaQuestionParser correctly uses a shuffling algorithm to mix up the answer choices. The frontend then displays these choices to the user without anyway of the user finding the correct answer.
+
+        Implementation: The TriviaQuestionParser correctly uses a shuffling algorithm to mix up the 
+                        answer choices. The frontend then displays these choices to the user without
+                        anyway of the user finding the correct answer.
   
 
 - [X] Feature 2: User Option Selection and Validation
 
         Objective: Implement a user input mechanism to allow answer selection and validate the response.
         Requirements: Use Scanner for input in the MillionaireCoderGame class. Add answer validation logic in the Question class.
-        Implementation: Since we used a React frontend, text field inputs as react state variables were used instead of a Scanner object for input. Answer validation logic is present in the Question class and works properly. ??????
+        Implementation: Since we used a React frontend, we used text field inputs binded to react
+                        state variables instead of a Scanner object for input. Answer validation logic
+                        is present in the for of the isCorrectAnswer() function in the Question class
+                        and works properly.
 
 
 - [X] Feature 3: Progressive Difficulty
@@ -48,7 +58,6 @@ Below are the features implemented using best Java and OOP principles
 Technical Details:
 
 - [X] Your code should compile and run without errors.
-          Comment: The code may contain a few bugs as API limits, CORS, and requests may run into issues. The environment also needs to be set correctly for the code to run.
 - [X] Follow Java coding standards and best practices.
 
 
