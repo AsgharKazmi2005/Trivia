@@ -2,7 +2,7 @@ Who Wants to be a Millionaire by Asghar Kazmi and Denis Musovski
 
 Professor Kapoor, The Java files can be found in the src file.
 
-Here is a demo. Note: The Phone a Friend lifeline returns correct 80% of the time. The Ask the Audience lifeline is a random assortion of percentages per answer.
+Here is a demo.
 
 ![](https://github.com/AsgharKazmi2005/Trivia/blob/main/Demo.gif)
 
@@ -11,7 +11,13 @@ The application is built using a Maven Java backend that also serves as an API f
 
 Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details and changes are described below.
 
-Below are the features implemented using best Java and OOP principles
+Below are the changes we made to the project from the general guidlines:
+        The Phone a Friend lifeline returns correct 80% of the time, rather than using an AI, to truly simulate the experience (and because it is simpler)
+        The Java code is cluttered with HTTP POST/GET requests to the front end (at port 5173) so the backend can communicate with the front end. We would've preferred to keep everything in the front end or to                      use a more Javascript friendly backend technology like Node.js, but we had to do use Java for OOP reasons. This meant that we had to use Copilot to help us generate these requests. We learned                     a lot from this.
+        The Lifelines implementation is not done in the player class, it is instead done between the Lifelines class and the front end to make the code simpler
+        If something is missing in the backend, it likely means it wasnt a hard requirement and was instead handled in the front end
+
+Below are the features implemented using best Java and OOP principles along with explanation on how we implemented it
 
 - [X] Feature 1: Interactive Question and Options Display
 
