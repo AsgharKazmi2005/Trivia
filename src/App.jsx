@@ -1,14 +1,17 @@
+// Import useState, useEffect, css stylesheet, and our components
 import React, { useState, useEffect } from 'react';
 import './App.css';
 import { Question, Lifeline } from './assets/comp.jsx';
 
 function App() {
+  //State variables to track questionData state, the generate button state, the score state, the answer state, and the game state
   const [questionData, setQuestionData] = useState(null);
   const [isDisabled, toggleDisability] = useState(false);
-  const [score, setScore] = useState(1); // Initial score
-  const [isCorrectAnswer, setIsCorrectAnswer] = useState(true); // Initially assume the answer is correct
-  const [isGameEnd, setIsGameEnd] = useState(false); // State to track if the game has ended
-
+  const [score, setScore] = useState(1);
+  const [isCorrectAnswer, setIsCorrectAnswer] = useState(true);
+  const [isGameEnd, setIsGameEnd] = useState(false);
+  
+  // Clear Answer styles after the user generates a new question
   function clearAnswers() {
     //Clear Styles and Enable Lifelines
     let incorrectList = document.getElementsByClassName('incorrect')
@@ -22,6 +25,7 @@ function App() {
     if (correctAnswer) correctAnswer.classList.remove('correct')
   }
 
+  //5-second toggle
   async function disableButton() {
     toggleDisability(true);
     await new Promise(resolve => {
@@ -31,6 +35,7 @@ function App() {
     });
   }
 
+  // Fetch data from the Java backend
   async function fetchQuestion() {
     clearAnswers();
     disableButton();
@@ -53,6 +58,7 @@ function App() {
     }
   }
 
+  // Deal with user input and process it to the backend
   function userAnswer(e, answer) {
     let el = e.target;
     if (answer === questionData.correct_answer) {
@@ -67,22 +73,26 @@ function App() {
     toggleDisability(true);
   }
 
+  // Push a question to the UI on document mount
   useEffect(() => {
     fetchQuestion();
   }, []);
 
+  // Reset all state variables on restart
   function restartGame() {
     setIsGameEnd(false);
     setScore(1);
     fetchQuestion();
   }
 
+  // Render modal on game end
   useEffect(() => {
     if (!isCorrectAnswer && !isGameEnd) {
       setIsGameEnd(true);
     }
   }, [isCorrectAnswer]);
 
+  // Set up dynamic UI
   return (
     <div className="container">
       <div className="title">Who wants to be a Millionaire!</div>
