@@ -2,6 +2,11 @@ Who Wants to be a Millionaire by Asghar Kazmi and Denis Musovski
 
 Professor Kapoor, The Java files can be found in the src file.
 
+Here is a demo. Note: The Phone a Friend lifeline returns correct 80% of the time. The Ask the Audience lifeline is a random assortion of percentages per answer.
+
+![](https://github.com/AsgharKazmi2005/Trivia/blob/main/Demo.gif)
+
+
 The application is built using a Maven Java backend that also serves as an API for the frontend. The front end is Vite Javascript React. Data is exchanged between the Java backend and React frontend through HTTP. This GITHUB will not function if executed as it is a collection of the front-end and back-end files without any infrastructure. The Java and Javascript/HTML/CSS files needed to be executed in their own contexts (IntelliJ IDE, VSCode Vite). They also need to have their dependencies installed on the host system.
 
 Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details and changes are described below.
