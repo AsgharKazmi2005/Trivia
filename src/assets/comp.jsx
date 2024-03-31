@@ -8,8 +8,8 @@ export function Question({ questionData }) {
     const [answersArr, setAnswersArr] = useState([]);
     //State variable that lets us know if a question is answered or not so users can't click multiple options
     const [isAnswered, setAnswered] = useState(false);
-    const [score, setScore] = useState(1); // Track user's score
-    const [showEndGameModal, setShowEndGameModal] = useState(false); // State to show EndGameModal
+    const [score, setScore] = useState(1); 
+    const [showEndGameModal, setShowEndGameModal] = useState(false);
     
     //Function for decoding the annoying HTML from the API. Use the .textContent property on a dummy HTML element
     function decodeHTML(encodedString) {
@@ -169,7 +169,7 @@ export function Lifeline({ questionData }) {
 
         if (index === 1) {
             // Simulate friend's response by selecting a random answer choice
-            setFriendAnswer(questionData.correct_answer); // Set friend's answer
+            setFriendAnswer(questionData.correct_answer);
             // Open the Phone a Friend modal
             setModalOpen(true);
         }
