@@ -14,16 +14,16 @@ Because we used React, we had to change the way some classes worked and change t
 Below are the changes we made to the project from the general guidlines you provided:
         
         
-        -The Java code is cluttered with HTTP POST/GET requests to the front end (at port 5173)
+        - The Java code is cluttered with HTTP POST/GET requests to the front end (at port 5173)
                  so the backend can communicate with the front end. We would've preferred to keep 
                  everything in the front end or to use a more Javascript friendly backend technology 
                  like Node.js, but we had to do use Java for OOP reasons. This meant that we had to
                  use Copilot to help us generate these HTTP requests. We learned a lot from it.
-        -The Lifelines implementation is not done in the player class, it is instead done between 
+        - The Lifelines implementation is not done in the player class, it is instead done between 
                  the Lifelines class and the front end to make the code simpler
-        -If something is missing in the backend, it likely means it wasnt a hard requirement
+        - If something is missing in the backend, it likely means it wasnt a hard requirement
                  and was instead handled in the front end instead
-        -The Phone a Friend lifeline returns correct 80% of the time, rather than using an AI,
+        - The Phone a Friend lifeline returns correct 80% of the time, rather than using an AI,
                  to truly simulate the experience (and because it is simpler/cheaper/more robust)
         - No Scanner object is used. React useState() variables are much more efficient at tracking
                  live user inputs and updating them in real-time, so we used them instead.
