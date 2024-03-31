@@ -1,5 +1,6 @@
 import React from 'react';
 
+// Render modal to store the 'Ask the Audience' data.
 export function AudienceResponseModal({ isOpen, onClose, answerChoices, percentages }) {
     if (!isOpen) return null;
 
@@ -21,7 +22,7 @@ export function AudienceResponseModal({ isOpen, onClose, answerChoices, percenta
         </div>
     );
 }
-
+// Render modal component to show the PhoneAFriend data
 export const PhoneAFriendModal = ({ isOpen, onClose, friendAnswer }) => {
     return (
         <>
@@ -39,6 +40,7 @@ export const PhoneAFriendModal = ({ isOpen, onClose, friendAnswer }) => {
     );
 };
 
+// Render modal for the end game
 export function EndGameModal({ score }) {
     if (score>=1000000) {
         score=1000000
