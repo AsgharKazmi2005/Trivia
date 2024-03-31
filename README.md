@@ -12,10 +12,21 @@ The application is built using a Maven Java backend that also serves as an API f
 Because we used React, we had to change the way some classes worked and change the information they manipulate. Still, all the below features are met. The implementation details and changes are described below.
 
 Below are the changes we made to the project from the general guidlines:
-        The Phone a Friend lifeline returns correct 80% of the time, rather than using an AI, to truly simulate the experience (and because it is simpler)
-        The Java code is cluttered with HTTP POST/GET requests to the front end (at port 5173) so the backend can communicate with the front end. We would've preferred to keep everything in the front end or to                      use a more Javascript friendly backend technology like Node.js, but we had to do use Java for OOP reasons. This meant that we had to use Copilot to help us generate these requests. We learned                     a lot from this.
-        The Lifelines implementation is not done in the player class, it is instead done between the Lifelines class and the front end to make the code simpler
-        If something is missing in the backend, it likely means it wasnt a hard requirement and was instead handled in the front end
+        
+        
+        -The Java code is cluttered with HTTP POST/GET requests to the front end (at port 5173)
+                 so the backend can communicate with the front end. We would've preferred to keep 
+                 everything in the front end or to use a more Javascript friendly backend technology 
+                 like Node.js, but we had to do use Java for OOP reasons. This meant that we had to
+                 use Copilot to help us generate these requests. We learned a lot from this.
+        -The Lifelines implementation is not done in the player class, it is instead done between 
+                 the Lifelines class and the front end to make the code simpler
+        -If something is missing in the backend, it likely means it wasnt a hard requirement
+                 and was instead handled in the front end
+        -The Phone a Friend lifeline returns correct 80% of the time, rather than using an AI,
+                 to truly simulate the experience (and because it is simpler)
+        - No Scanner class is used. React useState() variables are much more efficient at tracking
+                 live user inputs and updating them in real-time, so we used them.
 
 Below are the features implemented using best Java and OOP principles along with explanation on how we implemented it
 
