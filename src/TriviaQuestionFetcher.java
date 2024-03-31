@@ -15,7 +15,7 @@ public class TriviaQuestionFetcher {
         // Create HttpGet request with the URL
         HttpClient client = HttpClient.newHttpClient();
         HttpRequest request = HttpRequest.newBuilder()
-                .uri(URI.create("https://opentdb.com/api.php?amount=1&difficulty=" + difficulty + "&type=multiple"))
+                .uri(URI.create("APILINK" + difficulty + "APILINK"))
                 .build();
 
         try {
